@@ -23,8 +23,9 @@ The Maps API only uses the Embed SKU because Google has recently added billing f
 * Open Google Maps Directions to the restaurant location. <br/>
 
 ## Images of the website
-![startScreen](https://user-images.githubusercontent.com/45221821/63070834-e58d5d00-bf70-11e9-9b9b-07e09af7b98c.PNG)
-![searchCities](https://user-images.githubusercontent.com/45221821/63070860-fc33b400-bf70-11e9-8526-9b7146d6565d.PNG)
+![startScreen](https://user-images.githubusercontent.com/45221821/63070834-e58d5d00-bf70-11e9-9b9b-07e09af7b98c.PNG) <br/>
+Select from a list of cities.
+![searchCities](https://user-images.githubusercontent.com/45221821/63070860-fc33b400-bf70-11e9-8526-9b7146d6565d.PNG) <br/>
 ![searchCuisine](https://user-images.githubusercontent.com/45221821/63070867-0ce42a00-bf71-11e9-8181-3ace088f7e18.PNG)
 ![searchRestaurant](https://user-images.githubusercontent.com/45221821/63070869-0f468400-bf71-11e9-8553-14a2eecf180a.PNG)
 ![searchResultsPage1](https://user-images.githubusercontent.com/45221821/63070874-1372a180-bf71-11e9-8832-2bae5f6ba838.PNG)
