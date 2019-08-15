@@ -26,10 +26,16 @@ The Maps API only uses the Embed SKU because Google has recently added billing f
 ![startScreen](https://user-images.githubusercontent.com/45221821/63070834-e58d5d00-bf70-11e9-9b9b-07e09af7b98c.PNG) <br/>
 Select from a list of cities. <br/>
 ![searchCities](https://user-images.githubusercontent.com/45221821/63070860-fc33b400-bf70-11e9-8526-9b7146d6565d.PNG) <br/>
-![searchCuisine](https://user-images.githubusercontent.com/45221821/63070867-0ce42a00-bf71-11e9-8181-3ace088f7e18.PNG)
-![searchRestaurant](https://user-images.githubusercontent.com/45221821/63070869-0f468400-bf71-11e9-8553-14a2eecf180a.PNG)
+Search by cuisine. <br/>
+![searchCuisine](https://user-images.githubusercontent.com/45221821/63070867-0ce42a00-bf71-11e9-8181-3ace088f7e18.PNG) <br/>
+Search by restaurant name. <br/>
+![searchRestaurant](https://user-images.githubusercontent.com/45221821/63070869-0f468400-bf71-11e9-8553-14a2eecf180a.PNG) <br/>
+Multiple pages of results.  <br/>
 ![searchResultsPage1](https://user-images.githubusercontent.com/45221821/63070874-1372a180-bf71-11e9-8832-2bae5f6ba838.PNG)
 ![searchResultsPage2](https://user-images.githubusercontent.com/45221821/63070877-15d4fb80-bf71-11e9-97ea-17d89cd35458.PNG)
-![openZomatoPage](https://user-images.githubusercontent.com/45221821/63070887-1ec5cd00-bf71-11e9-92dc-1866728e9190.PNG)
-![openMapsDirections](https://user-images.githubusercontent.com/45221821/63070889-208f9080-bf71-11e9-82e5-1074c0459402.PNG)
+Open the restaurant's Zomato page. <br/>
+![openZomatoPage](https://user-images.githubusercontent.com/45221821/63070887-1ec5cd00-bf71-11e9-92dc-1866728e9190.PNG) <br/>
+Open the resaurant location on Google Maps Directions mode. <br/>
+![openMapsDirections](https://user-images.githubusercontent.com/45221821/63070889-208f9080-bf71-11e9-82e5-1074c0459402.PNG) <br/>
+The About page. <br/>
 ![about](https://user-images.githubusercontent.com/45221821/63070894-22595400-bf71-11e9-8f30-43daaacfa7e2.PNG)
