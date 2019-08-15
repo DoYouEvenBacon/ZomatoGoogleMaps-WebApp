@@ -32,7 +32,7 @@ Search by restaurant name. <br/>
 ![searchRestaurant](https://user-images.githubusercontent.com/45221821/63070869-0f468400-bf71-11e9-8553-14a2eecf180a.PNG) <br/>
 Multiple pages of results.  <br/>
 ![searchResultsPage1](https://user-images.githubusercontent.com/45221821/63070874-1372a180-bf71-11e9-8832-2bae5f6ba838.PNG)
-![searchResultsPage2](https://user-images.githubusercontent.com/45221821/63070877-15d4fb80-bf71-11e9-97ea-17d89cd35458.PNG)
+![searchResultsPage2](https://user-images.githubusercontent.com/45221821/63070877-15d4fb80-bf71-11e9-97ea-17d89cd35458.PNG) <br/>
 Open the restaurant's Zomato page. <br/>
 ![openZomatoPage](https://user-images.githubusercontent.com/45221821/63070887-1ec5cd00-bf71-11e9-92dc-1866728e9190.PNG) <br/>
 Open the resaurant location on Google Maps Directions mode. <br/>
