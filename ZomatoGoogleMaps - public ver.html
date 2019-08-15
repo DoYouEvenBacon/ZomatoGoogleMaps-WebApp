@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Search - powered by Zomato and Google Maps</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+	
+    <style>
+		html, body {
+			height: 97%;
+			width: 100%;
+			margin: 0;
+			font-family: Roboto, Arial, sans-serif;
+			background-color: #2D2D2D;
+		}
+		
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #2D2D2D;
+		}
+
+		li {
+		  float: left;
+		}
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+		li a:hover {
+		  background-color: #111;
+		}
+		
+		.searchBox {
+			width: 100%;
+			border-radius: 5px;
+			text-align: center;
+			margin-left: 5px;
+		}
+		.searchBox input[type = text] {
+			font-size: 15px;
+			border-radius: 5px;
+			padding: 8px;
+			margin-top: 6px;
+			border: none;
+		}
+		.searchBox button {
+			border-radius: 5px;
+			cursor: pointer;
+			float: right;
+			margin-top: 6px;
+			padding: 8px;
+			font-size: 15px;
+			border: none;
+			background-color: #E23744;
+			color: #fff;
+		}
+		
+		#resultsBox {
+			display: none;
+			position: absolute;
+			width: 500px;
+			height: 92%;
+			margin: 10px 0px 0px 10px;
+			background: #fff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+		}
+		.resultContainer {
+			padding: 5px;
+			height: 31%;
+			
+		}
+		.resultContainer:hover {
+			background-color: #fafafa;
+			cursor: pointer;
+		}
+		
+		.featuredImg {
+			float: right;
+			height: 100px;
+			/* width: 100px; */
+		}
+		.featuredImgContainer {
+			/* position: absolute; */
+			top: 3px;
+			left: 3px;
+		}
+		
+		.nameContainer {
+			/* position: absolute; */
+			color: #CB202D;
+			font-weight: bold;
+			font-size: 22px;
+		}
+		
+		.addrContainer {
+			/* position: absolute; */
+			font-weight: bold;
+			font-size: 15px;
+		}
+		
+		/*.ratingContainer {
+			position: absolute;
+			top: 10px;
+			right: 3px;
+		}*/
+		
+		.votesContainer {
+			color: #89959B;
+			font-size: 12px;
+		}
+		
+		.cuisinesContainer {
+			font-size: 15px;
+		}
+		
+		.avgCostContainer {
+			font-size: 15px;
+			/* position: absolute; */
+		}
+		
+		.timesContainer {
+			/* position: absolute; */
+		}
+		
+		.divider {
+			height: 0px;
+			border-bottom: 1px solid #e6e6e6;
+		}
+		
+		.prevNextButtons {
+			background-color: #2D2D2D;
+			border: 2px solid #2D2D2D;
+			color: #fff;
+			font-size: 20px;
+			padding: 1px 50px;
+		}
+		.prevNextButtons:hover {
+			cursor: pointer;
+			background-color: #656565;
+			border: 2px solid #656565;
+		}
+		.prevNextButtons:disabled {
+			cursor: not-allowed;
+			background-color: #cccccc;
+			border: 2px solid #cccccc;
+		}
+		
+		.externalLink {
+			display: none;
+			position: absolute;
+		}
+		
+		#citiesList {
+			cursor: pointer;
+			width: 100%;
+			border-radius: 5px;
+			font-size: 15px;
+			padding: 6px 5px;
+			margin: 6px 0px 0px 0px;
+		}
+		#citiesList:active {
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		
+		#linkToZomatoPage {
+			height: 20px;
+			width: 240px;
+			margin: 10px 0px 0px 520px;
+			/* background: #E23744;
+			color: #fff; */
+			text-align: center;
+			font-size: 15px;
+		}
+		#zomatoLogo {
+			width: 35%;
+		}
+		#zomatoLogo:hover {
+			cursor: pointer;
+		}
+		
+		#linkToMaps {
+			height: 20px;
+			width: 240px;
+			margin: 100px 0px 0px 520px;
+			text-align: center;		
+			font-size: 15px;
+		}
+
+		#mapsLogo {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		#mapsLogo:hover {
+			cursor: pointer;
+		}
+		
+		#mapFrame {
+			float: right;
+			height: 100%;
+			width: 100%;
+		}
+    </style>
+  </head>
+  <body onload="citiesDropdown()">
+
+	<div class="menuBar">
+		<ul>
+			<li><a href="#">Lookup Restaurants</a></li>
+			<li>
+				<select id='citiesList' onchange="gotoCityMaps()">
+				</select>
+			</li>
+			<li>
+				<div class="searchBox">
+					<input id="searchInput" type="text" placeholder="Search restaurants, cuisines">
+					<button id="searchButton" onclick="resetStartOffset(); clearResults(); search(); renderPrevNextButtons()">Search</button>
+				</div>
+			</li>
+			<li style="float: right"><a href="#" onclick="aboutPopup()">About</a></li>
+		</ul>
+	</div>
+	<div id="resultsBox">
+	</div>
+	<div class="externalLink" id="linkToZomatoPage">
+		<img id="zomatoLogo" src="https://b.zmtcdn.com/images/logo/zomato_flat_bg_logo.svg">
+	</div>
+	<div class="externalLink" id="linkToMaps">
+		Open in:
+		<img id="mapsLogo" src="https://www.google.com/maps/about/images/home/home-maps-icon.svg">
+	</div>
+	<iframe id="mapFrame" frameborder="1" style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?key=YourKeyHere&q=Auckland">
+	</iframe>
+
+  </body>
+  <script type="text/javascript" src="maps.js"></script>
+</html>
