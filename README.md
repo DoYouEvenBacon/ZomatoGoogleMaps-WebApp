@@ -5,11 +5,10 @@ I wanted to combine the full on map view of Google Maps along with restaurant in
 The Maps API only uses the Embed SKU because Google has recently added billing for many of the features. The Embed SKU requires no cost call, while many of the other advanced ones do.
 
 ## Requirements
-```
 - A modern web browser - this web app was developed on Google Chrome.
-- A Zomato API Key from https://developers.zomato.com/api - 1000 free calls per day.
-- A Google Maps API Key from https://cloud.google.com/maps-platform/ - requires you to set up billing info but this web app only makes free calls to the Embed SKU.
-```
+- [A Zomato API Key](https://developers.zomato.com/api) - 1000 free calls per day.
+- [A Google Maps API Key](https://cloud.google.com/maps-platform/) - requires you to set up billing info but this web app only makes free calls to the Embed SKU.
+
 ## Setting Up
 1. Place the html and JavaScript files in the same directory.
 2. Paste your Zomato and Google Maps API keys on the first two lines of the JavaScript file.
